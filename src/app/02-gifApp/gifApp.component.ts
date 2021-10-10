@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './gifApp.component.html',
   styleUrls: ['./gifApp.component.css']
 })
-export class AppComponent {
+export class GifAppComponent {
   title = 'gifApp';
 }

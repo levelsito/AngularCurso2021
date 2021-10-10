@@ -16,7 +16,7 @@ import { BasesComponent } from './bases.component';
     DbzModule
   ],
   exports: [
-    BasesModule
+    BasesComponent
   ]
 })
 export class BasesModule { }

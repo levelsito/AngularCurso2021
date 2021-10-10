@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 
 //MisImports
 import { BasesModule } from './01-bases/bases.module';
-import { GifAppModule } from './02-gifApp - app/gifApp.module';
+import { GifAppModule } from './02-gifApp/gifApp.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GifAppModule } from './02-gifApp - app/gifApp.module';
   imports: [
     BrowserModule,
     BasesModule,
-    GifAppModule
+    GifAppModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
