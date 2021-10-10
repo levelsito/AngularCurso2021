@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { SharedModule } from './shared/shared.module';
 import { GifsModule } from './gifs/gifs.module';
 import { GifsPageComponent } from './gifs/gifs-page/gifs-page.component';
 import { GifAppComponent } from "./gifApp.component";
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
-    GifAppComponent
+    GifAppComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
-    SharedModule,
     GifsModule
   ],
   exports: [

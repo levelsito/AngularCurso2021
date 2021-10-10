@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
 //Mis Imports
 import { BasesComponent } from './01-bases/bases.component';
-import { GifsPageComponent } from './02-gifApp/gifs/gifs-page/gifs-page.component';
+import { GifAppComponent } from './02-gifApp/gifApp.component';
+import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
+    { path: '', component: MenuComponent},
     { path: 'bases', component: BasesComponent},
-    { path: 'gifApps', component: GifsPageComponent },
+    { path: 'gifapp', component: GifAppComponent },
 ]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
