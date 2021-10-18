@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 
 import { GifsModule } from './gifs/gifs.module';
 import { GifsPageComponent } from './gifs/gifs-page/gifs-page.component';
@@ -13,7 +14,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   imports: [
     BrowserModule,
-    GifsModule
+    GifsModule,
+    HttpClientModule
   ],
   exports: [
     GifsPageComponent
