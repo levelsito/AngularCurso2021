@@ -4,19 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 //MisImports
-import { HeroesModule } from './heroes/heroe.module';
-import { ContadorModule } from "./contador/contador.module";
-import { DbzModule } from "./dbz/dbz.module";
+import { BasesModule } from './01-bases/bases.module';
+import { GifAppModule } from './02-gifApp/gifApp.module';
+import { AppRoutingModule } from './app-routing.module';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    HeroesModule,
-    ContadorModule,
-    DbzModule
+    BasesModule,
+    GifAppModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
