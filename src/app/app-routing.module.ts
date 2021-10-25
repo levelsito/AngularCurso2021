@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import { Routes, RouterModule } from '@angular/router';
 
 //Mis Imports
 import { BasesComponent } from './01-bases/bases.component';
 import { GifAppComponent } from './02-gifApp/gifApp.component';
 import { MenuComponent } from './menu/menu.component';
 
-const routes: Routes = [
-    { path: '', component: MenuComponent},
-    { path: 'bases', component: BasesComponent},
+export const routes: Routes = [
+    { path: '', component: MenuComponent, pathMatch: "full" },
+    { path: 'bases', component: BasesComponent },
     { path: 'gifapp', component: GifAppComponent },
-]; // sets up routes constant where you define your routes
+    { 
+      path: 'paisesapp',
+      children: [{
+        path: '',
+        loadChildren: () => import('./03-paisesApp/paises-app.module').then(m => m.PaisesAppModule),
+       }]
+    },
+    { path: '**', redirectTo: '' },
+];
 
-// configures NgModule imports and exports
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
