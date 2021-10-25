@@ -1,4 +1,4 @@
-<table class="table tabler-hover">
+<table class="table tabler-hover animate__animated animate__fadeIn">
     <thead>
         <tr>
             <th> # </th>
@@ -12,12 +12,12 @@
         <tr *ngFor="let pais of paises; let i = index">
             <td>{{ i + 1 }}</td>
             <td>
-                <img class="small-flag" src="{{ pais.flags.svg }}" alt="">    
+                <img class="small-flag" src="{{ pais.flags.svg }}" alt="">
             </td>
             <td>{{ pais.capital }}, {{ pais.name.common }}</td>
             <td>{{ pais.population | number }}</td>
             <td>
-                <a [routerLink]="['/pais', pais.cca2]">Ver...</a>
+                <a [routerLink]="['/paisesapp/pais', pais.cca2]">Ver...</a>
             </td>
         </tr>
     </tbody>

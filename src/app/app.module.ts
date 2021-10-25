@@ -9,7 +9,6 @@ import { BasesModule } from './01-bases/bases.module';
 import { GifAppModule } from './02-gifApp/gifApp.module';
 import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './menu/menu.component';
-import { PaisesAppModule } from './03-paisesApp/paises-app.module';
 
 
 @NgModule({
@@ -23,7 +22,6 @@ import { PaisesAppModule } from './03-paisesApp/paises-app.module';
     BasesModule,
     GifAppModule,
     AppRoutingModule,
-    PaisesAppModule
   ],
   providers: [],
   bootstrap: [AppComponent]

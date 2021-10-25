@@ -7,8 +7,7 @@ import { Country } from '../../interfaces/pais.interface';
 @Component({
   selector: 'app-ver-pais',
   templateUrl: './ver-pais.component.html',
-  styles: [
-  ]
+  styleUrls: ['../../../paises-app.component.css']
 })
 export class VerPaisComponent implements OnInit {
 
@@ -25,8 +24,7 @@ export class VerPaisComponent implements OnInit {
     
     this.activatedRoute.params
       .pipe(
-        switchMap( (param) => this.paisService.getPaisPorId(param.id)),
-        tap( console.log )
+        switchMap( (param) => this.paisService.getPaisPorId(param.id))
       )
       .subscribe( pais => {
         this.pais = pais[0]
