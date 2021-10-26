@@ -1,0 +1,5 @@
+.pipesapp {
+    background-color: var(--surface-b);
+    font-family: var(--font-family);
+    color: var(--text-color);
+}

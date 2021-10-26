@@ -1,7 +1,9 @@
 <nav>
     <ol>
-        <li><h2><a href="/bases">Bases</a></h2></li>
-        <li><h2><a href="/gifapp">GifApp</a></h2></li>
-        <li><h2><a href="/paisesapp">PaisesApp</a></h2></li>
+        <li *ngFor="let componente of componentes">
+            <button type="button" class="btn btn-primary" routerLink="/{{ componente | lowercase }}">
+                {{ componente }}
+            </button>
+        </li>
     </ol>
 </nav>

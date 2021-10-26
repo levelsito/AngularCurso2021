@@ -4,8 +4,7 @@ import { GifsService } from '../services/gifs.service';
 @Component({
   selector: 'app-busqueda',
   templateUrl: './busqueda.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class BusquedaComponent {
 

@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
+  componentes: string[] = [
+    'bases',
+    'gifApp',
+    'paisesApp',
+    'pipesApp'
+  ]
+
 }
