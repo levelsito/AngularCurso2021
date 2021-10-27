@@ -1,16 +1,5 @@
 <div class="pipesapp">
-    <h1>{{ nombre | titlecase }}</h1>
-    <h1>{{ valor | number }}</h1>
-    <h1>{{ obj | json }}</h1>
-
-    <button pButton label="Mostrar nombre" class="p-button-help" icon="pi pi-info-circle" iconPos="right"
-        (click)="mostrarNombre()">
-    </button>
-
-    <p-card header="{{ nombre | uppercase }}"
-            subheader="{{ valor | currency }}">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum tempora ipsum iure repellendus dolore, quos
-        molestiae dolores veniam consectetur qui repudiandae. Autem maiores a distinctio aperiam ipsam iure sequi
-        laudantium?
-    </p-card>
+    <app-menu></app-menu>
+    <router-outlet></router-outlet>
+    <router-outlet name="pipesapp"></router-outlet>
 </div>

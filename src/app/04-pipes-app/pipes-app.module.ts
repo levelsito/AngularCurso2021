@@ -4,9 +4,9 @@ import { CommonModule } from '@angular/common';
 //Componentes
 import { PipesAppComponent } from './pipes-app.component';
 
-//PrimeNG
-import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
+//Mis Modulos
+import { SharedModule } from '../shared/shared.module';
+import { PipesRouterModule } from './pipes-router.module';
 
 @NgModule({
   declarations: [
@@ -14,8 +14,8 @@ import { CardModule } from 'primeng/card';
   ],
   imports: [
     CommonModule,
-    ButtonModule,
-    CardModule
+    PipesRouterModule,
+    SharedModule
   ],
   exports: [
     PipesAppComponent
