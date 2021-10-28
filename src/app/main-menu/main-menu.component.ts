@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'main-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  templateUrl: './main-menu.component.html',
+  styleUrls: ['./main-menu.component.css']
 })
-export class MenuComponent {
+export class MainMenuComponent {
 
   componentes: string[] = [
     'bases',

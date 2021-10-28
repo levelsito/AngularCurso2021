@@ -1,16 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-numeros',
   templateUrl: './numeros.component.html',
-  styles: [
-  ]
+  styleUrls: ['../../../pipes-app.component.css']
 })
-export class NumerosComponent implements OnInit {
+export class NumerosComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ventasNetas: number = 21213123123.5577;
+  porcentaje: number = 0.4856;
 
 }

@@ -4,14 +4,14 @@ import { Component } from "@angular/core";
     selector: "app-contador",
     template: `
 
-        <h1>{{ titulo }}</h1>
+        <h2>{{ titulo }}</h2>
 
         <h3>La base es: <strong> {{ base }} </strong></h3>
 
         <button (click)="acumular(-base);">- {{ base }}</button>
         <span>{{ numero }}</span>
         <button (click)="acumular(+base);">+ {{ base }}</button>
-    
+
     `,
     styles: [`
         button {

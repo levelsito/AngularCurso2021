@@ -4,10 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 //Mis Imports
 import { BasesComponent } from './01-bases/bases.component';
 import { GifAppComponent } from './02-gifApp/gifApp.component';
-import { MenuComponent } from './menu/menu.component';
+import { MainMenuComponent } from './main-menu/main-menu.component';
 
 export const routes: Routes = [
-    { path: '', component: MenuComponent, pathMatch: "full" },
+    { path: '', component: MainMenuComponent, pathMatch: "full" },
     { path: 'bases', component: BasesComponent },
     { path: 'gifapp', component: GifAppComponent },
     {
