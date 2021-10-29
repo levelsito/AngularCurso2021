@@ -6,3 +6,7 @@
 .text-layout {
   color: var(--text-color);
 }
+
+.monospace {
+  font-family: monospace;
+}
