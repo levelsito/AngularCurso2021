@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-no-comunes',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../../../pipes-app.component.css']
 })
 export class NoComunesComponent implements OnInit {
+
+  fecha: Date = new Date(); // El día de hoy
 
   //i18nSelect
   nombre1: string = 'Irma';
@@ -20,9 +24,12 @@ export class NoComunesComponent implements OnInit {
 
   //i18nPlural
   clientes: string[] = [
-    'Maria',
+    'María',
     'Juan',
-    'Esteban'
+    'Esteban',
+    'José',
+    'Fernando',
+    'Irma'
   ];
   clientesMapa = {
     '=0':'no tenemos clientes esperando.',
@@ -36,14 +43,54 @@ export class NoComunesComponent implements OnInit {
   }
 
   cambiarPersona() {
-    this.nombre1 = 'Marcos';
-    this.genero1 = 'masculino';
-    this.nombre2 = 'Isabel';
-    this.genero2 = 'femenino';
+    if ( this.nombre1 === 'Marcos') {
+      this.nombre1 = 'Irma';
+      this.genero1 = 'femenino';
+      this.nombre2 = 'José Luis';
+      this.genero1 = 'masculino';
+    }
+    else {
+      this.nombre1 = 'Marcos';
+      this.genero1 = 'masculino';
+      this.nombre2 = 'Isabel';
+      this.genero2 = 'femenino';
+    }
   }
 
   borrarCliente() {
-    this.clientes.pop();
+    this.clientes.shift();
   }
 
+  // KeyValue Pipe
+  persona = {
+    nombre: 'José Luis',
+    edad: this.fecha.getFullYear()-1992,
+    direccion: 'Málaga, España'
+  }
+
+  //JSON Pipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      puedeVolar: true,
+    },
+    {
+      nombre: 'Robin',
+      puedeVolar: false,
+    },
+    {
+      nombre: 'Aquaman',
+      puedeVolar: false,
+    }
+  ]
+
+  //Async Pipe
+  miObservable = interval(2000); //0,1,2,3,4,...
+
+  valorPromesa = new Promise( ( resolve ) => {
+      setTimeout(() => {
+        resolve( 'Tenemos datos de la promesa' );
+      }, 3500)
+    }
+  );
 }
