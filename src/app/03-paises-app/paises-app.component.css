@@ -5,3 +5,7 @@
 li {
     cursor: pointer;
 }
+
+strong {
+    font-weight: bold;
+}

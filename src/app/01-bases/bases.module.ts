@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from "@angular/common";
 
 //Mis Imports
 import { HeroesModule } from './heroes/heroe.module';
@@ -11,6 +12,7 @@ import { BasesComponent } from './bases.component';
     BasesComponent
   ],
   imports: [
+    CommonModule,
     HeroesModule,
     ContadorModule,
     DbzModule

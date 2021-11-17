@@ -10,11 +10,13 @@ import { PaisesAppComponent } from './paises-app.component';
 
 export const routesPaises: Routes = [
   { path: '', component: PaisesAppComponent,
-    children: [{ path: '', component: PorPaisComponent },
-    { path: 'pais', component: PorPaisComponent },
-    { path: 'region', component: PorRegionComponent },
-    { path: 'capital', component: PorCapitalComponent },
-    { path: 'pais/:id', component: VerPaisComponent }]
+    children: [
+      { path: '', component: PorPaisComponent },
+      { path: 'pais', component: PorPaisComponent },
+      { path: 'region', component: PorRegionComponent },
+      { path: 'capital', component: PorCapitalComponent },
+      { path: 'pais/:id', component: VerPaisComponent }
+    ]
   }
 ];
 
@@ -24,4 +26,3 @@ export const routesPaises: Routes = [
 })
 export class PaisesRoutingModule { }
 
-    
