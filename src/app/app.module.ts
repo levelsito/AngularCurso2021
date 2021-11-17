@@ -23,7 +23,7 @@ import { PipesAppModule } from './04-pipes-app/pipes-app.module';
     BasesModule,
     GifAppModule,
     AppRoutingModule,
-    PipesAppModule
+    PipesAppModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

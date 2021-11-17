@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 //Mis Imports
 import { BasesComponent } from './01-bases/bases.component';
 import { GifAppComponent } from './02-gifApp/gifApp.component';
+import { HeroesAppComponent } from './05-heroes-app/heroes-app.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 
 export const routes: Routes = [
@@ -22,6 +23,14 @@ export const routes: Routes = [
       children: [{
         path: '',
         loadChildren: () => import('./04-pipes-app/pipes-app.module').then(m => m.PipesAppModule),
+       }]
+    },
+    // { path: 'heroesapp', component: HeroesAppComponent }
+    {
+      path: 'heroesapp',
+      children: [{
+        path: '',
+        loadChildren: () => import('./05-heroes-app/heroes-app.module').then(m => m.HeroesAppModule),
        }]
     }
 ];

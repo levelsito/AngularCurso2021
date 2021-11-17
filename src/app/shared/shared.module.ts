@@ -4,11 +4,13 @@ import { RouterModule } from '@angular/router';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenuPipesComponent } from './menu-pipes/menu-pipes.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
     SidebarComponent,
-    MenuPipesComponent
+    MenuPipesComponent,
+    ErrorPageComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
   ],
   exports: [
     SidebarComponent,
-    MenuPipesComponent
+    MenuPipesComponent,
+    ErrorPageComponent
   ]
 })
 export class SharedModule { }
