@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroesAppComponent } from './heroes-app.component';
-import { HeroesRoutingModule } from './heroes-app-routing.module';
+import { HeroesAppRoutingModule } from './heroes-app-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -10,7 +10,7 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    HeroesRoutingModule,
+    HeroesAppRoutingModule,
     SharedModule
   ],
   exports: [

@@ -5,19 +5,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeroesAppComponent } from './heroes-app.component';
 import { ErrorPageComponent } from '../shared/error-page/error-page.component';
 
-export const routesHeroes: Routes = [
+export const routesHeroesApp: Routes = [
     { path: '', component: HeroesAppComponent },
     { path: '404', component: ErrorPageComponent },
     {
       path: 'auth',
       loadChildren: () => import('./auth/auth.module').then ( m => m.AuthModule )
     },
+    {
+      path: 'heroes',
+      loadChildren: () => import('./heroes/heroes.module').then ( m => m.HeroesModule )
+    },
     { path: '**', redirectTo: '404' },
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routesHeroes)],
+  imports: [RouterModule.forChild(routesHeroesApp)],
   exports: [RouterModule]
 })
-export class HeroesRoutingModule { }
+export class HeroesAppRoutingModule {}
