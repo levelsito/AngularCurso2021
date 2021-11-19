@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './bases.component.html'
 })
 export class BasesComponent {
-  
+  componentes: string[] = [
+    'contador',
+    'DBZ',
+    'heroes'
+  ]
 }
 

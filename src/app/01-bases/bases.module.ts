@@ -6,6 +6,7 @@ import { HeroesModule } from './heroes/heroe.module';
 import { ContadorModule } from './contador/contador.module';
 import { DbzModule } from './dbz/dbz.module';
 import { BasesComponent } from './bases.component';
+import { BasesRoutingModule } from './bases-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BasesComponent } from './bases.component';
     CommonModule,
     HeroesModule,
     ContadorModule,
-    DbzModule
+    DbzModule,
+    BasesRoutingModule
   ],
   exports: [
     BasesComponent

@@ -1,1 +1,9 @@
-<app-contador></app-contador>
+<nav>
+    <ol>
+        <li *ngFor="let componente of componentes">
+            <button type="button" class="btn btn-primary" routerLink="{{ componente | lowercase }}">
+                {{ componente }}
+            </button>
+        </li>
+    </ol>
+</nav>
