@@ -6,8 +6,8 @@ import { HeroeComponent } from './pages/heroe/heroe.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { HeroesRouting } from './heroes-routing.module';
-
-
+import { MaterialModule } from '../material/material.module';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,9 @@ import { HeroesRouting } from './heroes-routing.module';
   ],
   imports: [
     CommonModule,
-    HeroesRouting
+    HeroesRouting,
+    MaterialModule,
+    HttpClient
   ]
 })
 export class HeroesModule { }
