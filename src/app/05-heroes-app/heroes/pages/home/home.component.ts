@@ -3,15 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styles: [`
-    .container{
-      margin: 10px;
-    }
-    .spacer {
-      flex: 1 1 auto;
-    }
-    `
-  ]
+  styleUrls: ['../../../heroes-app.component.css']
 })
 export class HomeComponent implements OnInit {
 

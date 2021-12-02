@@ -166,6 +166,24 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "superhero": "Black Panther",
+      "alter_ego": "Jack",
+      "characters": "Jack",
+      "first_appearance": "Primer Comic",
+      "publisher": "DC Comics",
+      "alt_img": "https://www.pandaancha.mx/plds/articulos/76431d4c3416a6969d57cfff9e19e4b2945775064.png",
+      "id": "UyEZ7GM"
+    },
+    {
+      "superhero": "Spider-Gwen",
+      "alter_ego": "Gwen Stacey",
+      "characters": "Gwen Stacey",
+      "first_appearance": "SpiderVerse #42",
+      "publisher": "DC Comics",
+      "alt_img": "https://i.pinimg.com/originals/49/0f/2c/490f2c41d5768057a5a1f4022da39b7a.jpg",
+      "id": "M2OGOxx"
     }
   ]
 }
