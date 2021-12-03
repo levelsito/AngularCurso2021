@@ -40,13 +40,13 @@
         Guardar
       </button>
       <span class="spacer"></span>
-      <button *ngIf="heroe.id" mat-raised-button (click)="borrarHeroe()" color="warn" (click)="guardar()">
+      <button *ngIf="heroe.id" mat-raised-button (click)="borrarHeroe()" color="warn">
         <mat-icon>delete</mat-icon>
         Eliminar
       </button>
     </div>
   </div>
   <div fxFlex="100 content">
-    <img [src]="heroe | imagen" alt="">
+    <img class="adjusted" [src]="heroe | imagen" alt="">
   </div>
 </div>
