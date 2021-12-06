@@ -59,8 +59,10 @@ export class AgregarComponent implements OnInit {
     if (this.heroe.id ) {
       // Actualizar
       this.heroesService.actualizarHeroe(this.heroe)
-        .subscribe( heroe =>
-          this.mostrarSnackBar('Registro actualizado'));
+        .subscribe( heroe => {
+          this.mostrarSnackBar('Registro actualizado'),
+          this.router.navigate(['/heroesapp/heroes', heroe.id]);
+        })
     } else {
       // Crear
       this.heroesService.agregarHeroe( this.heroe )
@@ -92,6 +94,10 @@ export class AgregarComponent implements OnInit {
     this.snackBar.open( mensaje, 'Cerrar', {
       duration: 2000
     });
+  }
+
+  regresar(){
+    this.router.navigate(['heroesapp/heroes']);
   }
 
 }

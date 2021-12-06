@@ -28,6 +28,10 @@ export class HeroeComponent implements OnInit {
       .subscribe( heroe => this.heroe = heroe );
   }
 
+  editar(){
+    this.router.navigate(['heroesapp/heroes/editar', this.heroe.id ]);
+  }
+
   regresar(){
     this.router.navigate(['heroesapp/heroes']);
   }

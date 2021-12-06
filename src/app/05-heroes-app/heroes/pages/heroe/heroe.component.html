@@ -9,6 +9,7 @@
        fxLayout.xs="column"
        fxLayoutGap="30px" >
     <div fxFlex="50">
+
       <h1>{{ heroe.superhero }} <small>- {{ heroe.alter_ego }}</small></h1>
       <mat-divider></mat-divider>
       <br>
@@ -24,9 +25,18 @@
         <mat-list-item>{{ heroe.alter_ego }} </mat-list-item>
       </mat-list>
       <br>
-      <button mat-button color="warn" (click)="regresar()">
-        Regresar
-      </button>
+      <div fxLayout="row" fxLayout.xs="column">
+        <button mat-raised-button color="primary" (click)="editar()">
+          <mat-icon>edit</mat-icon>
+          Editar
+        </button>
+        <span class="spacer"></span>
+        <button mat-raised-button color="link" (click)="regresar()">
+          <mat-icon>arrow_back</mat-icon>
+          Regresar
+        </button>
+        <br />
+      </div>
     </div>
   </div>
 </ng-template>
