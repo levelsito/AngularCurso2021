@@ -169,19 +169,19 @@
     },
     {
       "superhero": "Black Panther",
-      "alter_ego": "Jack",
-      "characters": "Jack",
-      "first_appearance": "Primer Comic",
-      "publisher": "DC Comics",
+      "alter_ego": "T'Challa",
+      "characters": "T'Challa",
+      "first_appearance": "The Fantastic Four #52",
+      "publisher": "Marvel Comics",
       "alt_img": "https://www.pandaancha.mx/plds/articulos/76431d4c3416a6969d57cfff9e19e4b2945775064.png",
       "id": "UyEZ7GM"
     },
     {
       "superhero": "Spider-Gwen",
-      "alter_ego": "Gwen Stacey",
-      "characters": "Gwen Stacey",
-      "first_appearance": "SpiderVerse #42",
-      "publisher": "DC Comics",
+      "alter_ego": "Gwen Stacy",
+      "characters": "Gwen Stacy",
+      "first_appearance": "Edge of Spider-Verse #2 ",
+      "publisher": "Marvel Comics",
       "alt_img": "https://i.pinimg.com/originals/49/0f/2c/490f2c41d5768057a5a1f4022da39b7a.jpg",
       "id": "M2OGOxx"
     },
@@ -189,7 +189,7 @@
       "superhero": "Venom",
       "alter_ego": "Eddie Brock",
       "characters": "Eddie Brock",
-      "first_appearance": "Venom #1",
+      "first_appearance": "The Amazing Spider-Man #252",
       "publisher": "Marvel Comics",
       "alt_img": "https://www.xtrafondos.com/wallpapers/arte-digital-venom-5339.jpg",
       "id": "gVQw6pU"

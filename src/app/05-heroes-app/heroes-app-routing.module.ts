@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 //Mis Imports
-import { HeroesAppComponent } from './heroes-app.component';
 import { ErrorPageComponent } from '../shared/error-page/error-page.component';
+import { AuthGuard } from './auth/guards/auth.guard';
 
 export const routesHeroesApp: Routes = [
   {
@@ -12,7 +12,9 @@ export const routesHeroesApp: Routes = [
   },
   {
     path: 'heroes',
-    loadChildren: () => import('./heroes/heroes.module').then ( m => m.HeroesModule )
+    loadChildren: () => import('./heroes/heroes.module').then ( m => m.HeroesModule ),
+    canLoad: [ AuthGuard ],
+    canActivate: [ AuthGuard ]
   },
   { path: '404', component: ErrorPageComponent },
   { path: '**', redirectTo: '404' },

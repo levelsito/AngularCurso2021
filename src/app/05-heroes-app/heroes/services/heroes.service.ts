@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 import { Heroe } from '../interface/heroes.interface';
 
@@ -9,7 +10,7 @@ import { Heroe } from '../interface/heroes.interface';
 })
 export class HeroesService {
 
-  private apiEndpoint: string = 'http://localhost:3000';
+  private apiEndpoint: string = environment.baseUrl;
 
   constructor( private http: HttpClient ) { }
 
