@@ -5,11 +5,9 @@ import { CommonModule } from '@angular/common';
 
 //MisImports
 import { AppComponent } from './app.component';
-import { BasesModule } from './01-bases/bases.module';
 import { GifAppModule } from './02-gifApp/gifApp.module';
 import { AppRoutingModule } from './app-routing.module';
 import { MainMenuComponent } from './main-menu/main-menu.component';
-import { PipesAppModule } from './04-pipes-app/pipes-app.module';
 
 @NgModule({
   declarations: [
@@ -20,10 +18,8 @@ import { PipesAppModule } from './04-pipes-app/pipes-app.module';
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
-    BasesModule,
     GifAppModule,
-    AppRoutingModule,
-    PipesAppModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

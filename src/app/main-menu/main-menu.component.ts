@@ -11,7 +11,8 @@ export class MainMenuComponent {
     'bases',
     'gifApp',
     'paisesApp',
-    'pipesApp'
+    'pipesApp',
+    'heroesApp'
   ]
 
 }

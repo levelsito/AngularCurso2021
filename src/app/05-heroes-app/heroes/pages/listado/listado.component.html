@@ -1,0 +1,15 @@
+<h1>Listado de Heroes</h1>
+<mat-divider></mat-divider>
+<br />
+<i>Es necesario arrancar heroes-server (json-server --watch db.json) en el directorio del servidor para mostrar los datos.</i>
+<div fxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="20px">
+  <div fxFlex="20"
+    fxFlex.lg="15"
+    fxFlex.sm="30"
+    *ngFor="let heroe of heroes">
+    <heroes-tarjeta [heroe]="heroe"></heroes-tarjeta>
+  </div>
+</div>
