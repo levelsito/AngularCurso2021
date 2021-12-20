@@ -4,7 +4,7 @@ import { GifsService } from '../gifs/services/gifs.service';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['../gifApp.component.css']
+  styleUrls: ['../gif-app.component.css']
 })
 export class SidebarComponent {
 
