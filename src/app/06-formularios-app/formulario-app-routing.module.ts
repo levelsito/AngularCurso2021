@@ -8,18 +8,22 @@ import { TemplateModule } from './template/template.module';
 
 export const routesFormulariosApp: Routes = [
   {
-    path: '',
-    component: FormulariosAppComponent
-  },
-  {
-    path: 'reactive',
-    loadChildren: () => import( './reactive/reactive.module' ).then( m => ReactiveModule )
-  },
-  {
-    path: 'template',
-    loadChildren: () => import( './template/template.module' ).then( m => TemplateModule )
-  },
-  { path: '**', redirectTo: '' },
+    path: '' ,
+    component: FormulariosAppComponent,
+    children: [
+      {
+        path: 'template',
+        loadChildren: () => import( './template/template.module' ).then( m => TemplateModule )
+      },
+      {
+        path: 'reactive',
+        loadChildren: () => import( './reactive/reactive.module' ).then( m => ReactiveModule )
+      },
+      {
+        path: '**', redirectTo: 'template'
+      }
+    ]
+  }
 ];
 
 @NgModule({

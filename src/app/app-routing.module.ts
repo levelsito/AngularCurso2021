@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FormulariosAppComponent } from './06-formularios-app/formularios-app.component';
 
 //Mis Imports
 import { MainMenuComponent } from './main-menu/main-menu.component';
@@ -44,7 +45,7 @@ export const routes: Routes = [
       children: [{
         path: '',
         loadChildren: () => import('./06-formularios-app/formularios-app.module').then(m => m.FormulariosAppModule),
-       }]
+      }]
     }
 ];
 
