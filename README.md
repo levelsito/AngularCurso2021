@@ -1,5 +1,5 @@
 # CursoAngular2021
-Node v14.17.6
+Node v14.18.2 LTS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
