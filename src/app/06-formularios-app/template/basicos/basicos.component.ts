@@ -11,17 +11,32 @@ export class BasicosComponent implements OnInit {
 
   @ViewChild('miFormulario') miFormulario!: NgForm;
 
+  initialForm = {
+    nombreProducto: '',
+    precioProducto: 0,
+    stockProducto: 0
+  }
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  // guardar( miFormulario: NgForm ) {
+
   guardar() {
-    console.log( this.miFormulario );
+    console.log( 'Posteo correcto');
+    this.miFormulario.resetForm({
+      precioProducto: 0,
+      stockProducto: 0
+    });
   }
 
   nombreValido(): boolean {
     return this.miFormulario?.controls.nombreProducto?.invalid &&
       this.miFormulario?.controls.nombreProducto?.touched
+  }
+
+  precioValido(): boolean {
+    return this.miFormulario?.controls.precioProducto?.value < 0 &&
+      this.miFormulario?.controls.precioProducto?.touched
   }
 }

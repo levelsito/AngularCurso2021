@@ -11,8 +11,8 @@
         <label class="col-sm-3 col-form-label">Producto</label>
         <div class="col-sm-9">
           <input type="text" name="nombreProducto"
-            class="form-control" ngModel required
-            placeholder="Nombre del producto" minlength="3">
+            class="form-control" [ngModel]="initialForm.nombreProducto"
+            required placeholder="Nombre del producto" minlength="3">
           <span class="form-text text-danger"
             *ngIf="nombreValido()">
             Debe de ser de 3 letras
@@ -25,8 +25,12 @@
         <label class="col-sm-3 col-form-label">Precio</label>
         <div class="col-sm-9">
           <input type="number" name="precioProducto"
-            class="form-control" ngModel required
-            placeholder="Precio del producto">
+            class="form-control" [ngModel]="initialForm.precioProducto"
+            required placeholder="Precio del producto" min="0">
+            <span class="form-text text-danger"
+              *ngIf="precioValido()">
+            El precio debe ser mayor o igual a 0
+          </span>
         </div>
       </div>
 
@@ -35,7 +39,8 @@
         <label class="col-sm-3 col-form-label">Existencias</label>
         <div class="col-sm-9">
           <input type="number" name="stockProducto"
-            class="form-control" ngModel
+            class="form-control" [ngModel]="initialForm.stockProducto"
+            customMin [minimo]="0" required
             placeholder="Existencias del producto">
         </div>
       </div>
@@ -43,7 +48,9 @@
       <!-- Campo de producto -->
       <div class="row">
         <div class="col">
-          <button type="submit" class="btn btn-primary float-end">
+          <button type="submit"
+            class="btn btn-primary float-end"
+            [disabled]="miFormulario.invalid">
             Guardar
           </button>
         </div>
@@ -65,6 +72,9 @@
 
     <span>Value</span>:
     <pre>{{ miFormulario.value | json }}</pre>
+
+    <span>CustomDirective</span>:
+    <pre>{{ miFormulario.controls.existencias?.errors | json }}</pre>
 
   </div>
 </div>
