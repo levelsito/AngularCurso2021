@@ -3,30 +3,32 @@
 
 <div class="row">
   <div class="col">
-    <form autocomplete="off" [formGroup]="miFormulario">
+    <form (ngSubmit)="guardar()" autocomplete="off" [formGroup]="miFormulario">
 
-      <!-- Campo de producto -->
+      <!-- Nombre de producto -->
       <div class="mb-3 row">
         <label class="col-sm-3 col-form-label">Producto</label>
         <div class="col-sm-9">
           <input type="text" class="form-control"
             formControlName="nombre"
             placeholder="Nombre del producto">
-          <span class="form-text text-danger">
-            Debe de ser de 3 letras
+          <span class="form-text text-danger"
+            *ngIf="campoValido('nombre')">
+            Debe tener al menos 3 carácteres.
           </span>
         </div>
       </div>
 
-      <!-- Campo de producto -->
+      <!-- Precio de producto -->
       <div class="mb-3 row">
         <label class="col-sm-3 col-form-label">Precio</label>
         <div class="col-sm-9">
           <input type="number" class="form-control"
             formControlName="precio"
             placeholder="Precio del producto">
-            <span class="form-text text-danger">
-            El precio debe ser mayor o igual a 0
+          <span class="form-text text-danger"
+            *ngIf="campoValido('precio')">
+            El precio debe ser mayor o igual a 0.
           </span>
         </div>
       </div>
@@ -38,10 +40,14 @@
           <input type="number" class="form-control"
             formControlName="existencias"
             placeholder="Existencias del producto">
+          <span class="form-text text-danger"
+            *ngIf="campoValido('existencias')">
+            Las existencias deben ser mayor o igual a 0.
+          </span>
         </div>
       </div>
 
-      <!-- Campo de producto -->
+      <!-- Botón de guardar -->
       <div class="row">
         <div class="col">
           <button type="submit"
@@ -67,6 +73,12 @@
 
     <span>Value</span>:
     <pre>{{ miFormulario.value | json }}</pre>
+
+    <span>Nombre Errors</span>:
+    <pre>{{ miFormulario.controls.nombre.errors | json }}</pre>
+
+    <span>Precio Errors</span>:
+    <pre>{{ miFormulario.controls.precio.errors | json }}</pre>
 
   </div>
 </div>
