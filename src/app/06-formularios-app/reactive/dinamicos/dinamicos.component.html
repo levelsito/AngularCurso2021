@@ -9,7 +9,7 @@
         formControlName="nombre" (keyup.enter)="guardar()">
       <span class="form-text text-danger"
         *ngIf="campoValido('nombre')">
-        Este campo debe tener 3 carácteres como mínimo.
+        Debe tener 3 carácteres como mínimo.
       </span>
     </div>
   </div>
@@ -72,10 +72,6 @@
 
     <span>Value</span>:
     <pre>{{ miFormulario.value | json }}</pre>
-
-    <span>Agregar Juego</span>:
-    <pre>Valid: {{ nuevoFavorito.valid }}</pre>
-    <pre>Value: {{ nuevoFavorito.value }}</pre>
 
   </div>
 </div>
