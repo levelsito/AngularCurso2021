@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FormulariosAppComponent } from './06-formularios-app/formularios-app.component';
 
 //Mis Imports
-import { GifAppComponent } from './02-gifApp/gifApp.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 
 export const routes: Routes = [
@@ -13,7 +13,12 @@ export const routes: Routes = [
         loadChildren: () => import('./01-bases/bases.module').then (m => m.BasesModule)
       }]
     },
-    { path: 'gifapp', component: GifAppComponent },
+    { path: 'gifapp',
+      children: [{
+        path: '',
+        loadChildren: () => import('./02-gif-app/gif-app.module').then(m => m.GifAppModule),
+      }]
+    },
     {
       path: 'paisesapp',
       children: [{
@@ -35,7 +40,13 @@ export const routes: Routes = [
         loadChildren: () => import('./05-heroes-app/heroes-app.module').then(m => m.HeroesAppModule),
        }]
     },
-    { path: '**', redirectTo: '' },
+    {
+      path: 'formulariosapp',
+      children: [{
+        path: '',
+        loadChildren: () => import('./06-formularios-app/formularios-app.module').then(m => m.FormulariosAppModule),
+      }]
+    }
 ];
 
 @NgModule({

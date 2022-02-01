@@ -5,15 +5,15 @@ import { SearchGifsResponse, Gif } from '../interface/gifs.interface';
 @Injectable({
   providedIn: 'root'
 })
+
 export class GifsService {
 
   private apiKey: string = 'lMWF1Dybf6Uj50jWyXehqwJU5L2x53rY';
   private servicioUrl: string = 'https://api.giphy.com/v1/gifs';
   private _historial: string[] = [];
 
-  // TODO: Cambiar any por su tipo
   public resultados: Gif[] = [];
-  
+
   get historial(){
     return [...this._historial];
   }
@@ -35,7 +35,7 @@ export class GifsService {
 
       //El array de historial hay que convertirlo para poder almacenarlo en localStorage
       localStorage.setItem('historial', JSON.stringify( this._historial ) );
-      
+
 
     }
 
@@ -43,7 +43,7 @@ export class GifsService {
       .set('api_key', this.apiKey)
       .set('limit', '10')
       .set('q', query);
-    
+
     this.http.get<SearchGifsResponse>(`${ this.servicioUrl }/search`,{ params } )
       .subscribe( (resp) => {
         this.resultados = resp.data;

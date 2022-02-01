@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 //MisImports
 import { AppComponent } from './app.component';
-import { GifAppModule } from './02-gifApp/gifApp.module';
 import { AppRoutingModule } from './app-routing.module';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 
@@ -18,7 +18,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
-    GifAppModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

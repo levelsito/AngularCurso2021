@@ -5,12 +5,14 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenuPipesComponent } from './menu-pipes/menu-pipes.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { SidemenuComponent } from './sidemenu/sidemenu.component';
 
 @NgModule({
   declarations: [
     SidebarComponent,
     MenuPipesComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    SidemenuComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
   exports: [
     SidebarComponent,
     MenuPipesComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    SidemenuComponent
   ]
 })
 export class SharedModule { }

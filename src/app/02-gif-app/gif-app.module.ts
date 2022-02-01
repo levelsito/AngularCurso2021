@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from "@angular/common/http";
 import { CommonModule } from "@angular/common";
 
+// Mis imports
 import { GifsModule } from './gifs/gifs.module';
-import { GifsPageComponent } from './gifs/gifs-page/gifs-page.component';
-import { GifAppComponent } from "./gifApp.component";
+import { GifAppComponent } from "./gif-app.component";
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { GifRoutingModule } from './gif-app.routing.module';
 
 @NgModule({
   declarations: [
@@ -15,10 +15,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   imports: [
     CommonModule,
     GifsModule,
-    HttpClientModule
+    GifRoutingModule
   ],
   exports: [
-    GifsPageComponent
+    GifAppComponent
   ]
 })
 export class GifAppModule { }
