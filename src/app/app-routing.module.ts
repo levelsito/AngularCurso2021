@@ -46,6 +46,13 @@ export const routes: Routes = [
         path: '',
         loadChildren: () => import('./06-formularios-app/formularios-app.module').then(m => m.FormulariosAppModule),
       }]
+    },
+    {
+      path: 'selectores',
+      children: [{
+        path: '',
+        loadChildren: () => import('./07-selectores/selectores.module').then(m => m.SelectoresModule),
+      }]
     }
 ];
 

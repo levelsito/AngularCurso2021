@@ -12,7 +12,8 @@ export class MainMenuComponent {
     'paisesApp',
     'pipesApp',
     'heroesApp',
-    'formulariosApp'
+    'formulariosApp',
+    'selectores'
   ]
 
 }
