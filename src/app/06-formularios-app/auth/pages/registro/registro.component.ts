@@ -21,6 +21,20 @@ export class RegistroComponent implements OnInit {
     validators: [  this.vs.mismaContraseña('password', 'password2') ]
   })
 
+  get emailErrorsMsg(): string{
+    const errors = this.miFormulario.get('email')?.errors;
+    if ( errors?.required ) {
+      return "Email requerido";
+    }
+    if ( errors?.pattern ) {
+      return "Formato de correo erróneo";
+    }
+    if ( errors?.emailDuplicado ) {
+      return "Correo duplicado";
+    }
+    return null;
+  }
+
   constructor( private fb: FormBuilder,
                private vs: ValidatorService,
                private emailValidator: EmailValidatorService ) { }

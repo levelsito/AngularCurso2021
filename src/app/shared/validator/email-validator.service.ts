@@ -12,7 +12,7 @@ export class EmailValidatorService implements AsyncValidator {
   constructor( private http: HttpClient) { }
   validate( control: AbstractControl ): Observable<ValidationErrors | null> {
     const email = control.value;
-    console.log(email);
+    console.log("Email enviado:",email);
     return this.http.get<any[]>(`http://localhost:3000/usuarios?q=${ email }`)
       .pipe(
         delay(3000),
